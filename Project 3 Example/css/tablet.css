@@ -1,0 +1,20 @@
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .menu{
+        background-color: #556270;
+    }
+    .menu-left ul li a, .menu-right ul li a{
+        color: white;
+    }
+    .banner-img{
+        display: none;
+    }
+    .banner-text{
+        position: unset;
+        color: black;
+        padding: 20px 50px;
+    }
+    hr{
+        display: block;
+        margin: 0px 50px;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansory Example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style type="text/css">
+        .wrapper {
+            margin: 50px;
+            columns: 3;
+        }
+        .wrapper div{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            break-inside: avoid;
+            margin-top: 20px;
+        }
+        .wrapper div:first-child{
+            margin-top: 0px;
+        }
+        .item1{
+            background-color: #aef3b7;
+            height: 550px;
+        }
+        .item2{
+            background-color: #ffe976;
+            height: 235px;
+        }
+        .item3{
+            background-color: #5dfffc;
+            height: 400px;
+        }
+        .item4{
+            background-color: #e5b5fc;
+            height: 240px;
+        }
+        .item5{
+            background-color: #fe9b5a;
+            height: 350px;
+        }
+        .item6{
+            background-color: black;
+            height: 365px;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 991px){
+            .wrapper{
+                columns: 2;
+            }
+        }
+        @media only screen and (max-width: 767px){
+            .wrapper{
+                columns: 1;
+            }
+        }
+    </style>
+    <div class="wrapper">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+      <div class="item6">6</div>
+    </div>
+</body>
+</html>

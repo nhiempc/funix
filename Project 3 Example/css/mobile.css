@@ -1,0 +1,41 @@
+@media only screen and (max-width: 767px) {
+    .menu{
+        background-color: #556270;
+        justify-content: unset;
+    }
+    .menu-left ul li a, .menu-right ul li a{
+        color: white;
+        font-size: 4vw;
+    }
+    .menu-left{
+        padding-left: 5px;
+    }
+    .menu-right{
+        padding-right: 5px;
+    }
+    .banner-img{
+        display: none;
+    }
+    .banner-text{
+        position: unset;
+        color: black;
+        padding: 15px;
+    }
+    hr{
+        display: block;
+        margin: 0px 15px;
+    }
+    .main-content-head{
+        padding: 15px;
+    }
+    .main-content-images, .footer{
+        padding: 15px;
+    }
+    .column{
+        padding: 0px;
+    }
+    .column img{
+        width: 100%;
+        padding: 15px 0px;
+    }
+}

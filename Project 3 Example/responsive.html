@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 100px;
+        }
+        .item1, .item2, .item3, .item4, .item5, .item6{
+            margin: 20px;
+            width: calc(33.33% - 40px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+            flex: 1 auto;
+        }
+        .item1{
+            background-color: rgb(108, 119, 216);
+            height: 500px;
+        }
+        .item2{
+            background-color: rgb(221, 101, 211);
+            height: 360px;
+        }
+        .item3{
+            background-color: rgba(105, 207, 102, 0.719);
+            height: 315px;
+        }
+        .item4{
+            background-color: rgb(214, 216, 108);
+            height: 195px;
+        }
+        .item5{
+            background-color: rgb(216, 108, 108);
+            height: 200px;
+        }
+        .item6{
+            background-color: rgb(3, 2, 2);
+            height: 320px;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .item1, .item2, .item3, .item4, .item5, .item6{
+                width: calc(50% - 40px);
+            }
+            .container{
+                margin: 50px;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .item1, .item2, .item3, .item4, .item5, .item6{
+                width: calc(100% - 40px);
+            }
+            .container{
+                margin: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+    </div>
+</body>
+</html>

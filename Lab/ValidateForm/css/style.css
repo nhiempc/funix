@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+body{
+    font-size: 16px;
+    color: brown;
+    background-color: white;
+}
+form{
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-control{
+    padding: 10px 0px;
+    align-items: center;
+    gap: 20px;
+}
+.form-control label{
+    width: 25%;
+    font-size: 1.5rem;
+    color: brown;
+}
+.form-control input{
+    border: 1px solid brown;
+    border-radius: 5px;
+    width: calc(75% - 20px);
+    padding: 10px;
+    color: brown;
+    font-size: 1.25rem;
+}
+.form-control input::placeholder{
+    color: gray;
+    font-style: italic;
+}
+.form-control input:focus-visible{
+    outline: 0px solid brown;
+    border-radius: 5px;
+}
+.radio-group input{
+    width: fit-content;
+}
+button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    cursor: pointer;
+    background-color: brown;
+    color: white;
+    font-size: 1.25rem;
+    margin-top: 20px;
+}
+button:hover{
+    background-color: black;
+    transition: all 0.5s;
+}
+.error{
+    color: red;
+    font-size: 1.25rem;
+    padding-left: calc(25% + 20px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.checkbox-group input{
+    width: fit-content;
+}
+@media only screen and (max-width: 767px) {
+    form{
+        width: 100%;
+    }
+    .form-control label, .form-control input{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    form{
+        width: 80%;
+    }
+}
