@@ -7,24 +7,30 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/font.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
     <title>Assignment 02</title>
   </head>
   <body>
     <div id="banner">
-      <h1>Nguyễn Văn A</h1>
-      <span>Full Stack Developer</span>
+      <div class="banner-img">
+        <img src="images/banner.jpg" alt="banner image" />
+      </div>
+      <div class="banner-text">
+        <h1>Nguyễn Văn A</h1>
+        <span>Full Stack Developer</span>
+      </div>
     </div>
 
     <section id="nav-bar">
-      <nav class="container row">
+      <nav class="container">
         <a href="#">Thông tin <i class="icon-user"></i></a>
         <a href="#">Lý lịch <i class="icon-doc-text-inv"></i></a>
         <div class="name">
-          <h1>Nguyễn Văn A</h1>
-          <p>Full Stack Developer</p>
+          <div class="avatar">
+            <img src="images/default-avatar.webp" alt="Avatar" />
+          </div>
         </div>
         <a href="#">Chứng chỉ <i class="icon-mail-alt"></i></a>
         <a href="#">Dự Án <i class="icon-star-1"></i></a>
@@ -53,16 +59,24 @@
             <li><span>Địa chỉ</span> : Số 10, đường 10, Hà Nội</li>
             <li><span>Website</span> : https://abc.tech</li>
           </ul>
+          <div class="info-icons">
+            <i class="icon-twitter"></i>
+            <i class="icon-facebook"></i>
+            <i class="icon-gplus"></i>
+            <i class="icon-linkedin"></i>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="job-info">
       <div class="container">
-        <div class="column">
-          <div class="column-item">
+        <div class="job-item">
+          <div class="job-header">
             <h1>Kinh nghiệm</h1>
-            <i class="ic-toolbox class"></i>
+            <i class="ic-toolbox"></i>
+          </div>
+          <div class="job-content">
             <div class="work-detail">
               <div class="name-work">
                 <h4>FullStack Developer - Công ty Y</h4>
@@ -97,33 +111,13 @@
               </div>
             </div>
           </div>
-          <div class="column-item">
-            <h1>Sở thích</h1>
-            <i class="ic-telescope"></i>
-            <div class="hobbies">
-              <div class="hobbies-item">
-                <i class="ic-megaphone"></i>
-                <h5>Âm nhạc</h5>
-              </div>
-              <div class="hobbies-item">
-                <i class="ic-strategy"></i>
-                <h5>Chơi game</h5>
-              </div>
-              <div class="hobbies-item">
-                <i class="ic-hotairballoon"></i>
-                <h5>Du lịch</h5>
-              </div>
-              <div class="hobbies-item">
-                <i class="ic-basket"></i>
-                <h5>Nấu ăn</h5>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="column">
-          <div class="column-item">
+        <div class="job-item">
+          <div class="job-header">
             <h1>Học vấn</h1>
             <i class="ic-pencil"></i>
+          </div>
+          <div class="job-content">
             <div class="work-detail">
               <div class="name-work">
                 <h4>FUNiX</h4>
@@ -153,37 +147,13 @@
               </div>
             </div>
           </div>
-          <div class="column-item">
-            <h1>Ngôn ngữ</h1>
-            <i class="ic-mic"></i>
-            <div class="language">
-              <div class="language-item">
-                <div class="language-name">
-                  <h5>Tiếng Anh - IELTS 7.0</h5>
-                </div>
-                <div class="rate">
-                  <div class="active"></div>
-                  <div class="active"></div>
-                  <div class="non-active"></div>
-                </div>
-              </div>
-              <div class="language-item">
-                <div class="language-name">
-                  <h5>Tiếng Nhật - JLPT N4</h5>
-                </div>
-                <div class="rate">
-                  <div class="active"></div>
-                  <div class="non-active"></div>
-                  <div class="non-active"></div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="column">
-          <div class="column-item">
+        <div class="job-item">
+          <div class="job-header">
             <h1>Hoạt động</h1>
             <i class="ic-toolbox"></i>
+          </div>
+          <div class="job-content">
             <div class="work-detail">
               <div class="name-work">
                 <h4>FPT Edu Hackathon 2019</h4>
@@ -210,9 +180,69 @@
               </div>
             </div>
           </div>
-          <div class="column-item">
+        </div>
+        <div class="job-item">
+          <div class="job-header">
+            <h1>Sở thích</h1>
+            <i class="ic-telescope"></i>
+          </div>
+          <div class="job-content">
+            <div class="hobbies">
+              <div class="hobbies-item">
+                <i class="ic-megaphone"></i>
+                <h5>Âm nhạc</h5>
+              </div>
+              <div class="hobbies-item">
+                <i class="ic-strategy"></i>
+                <h5>Chơi game</h5>
+              </div>
+              <div class="hobbies-item">
+                <i class="ic-hotairballoon"></i>
+                <h5>Du lịch</h5>
+              </div>
+              <div class="hobbies-item">
+                <i class="ic-basket"></i>
+                <h5>Nấu ăn</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="job-item">
+          <div class="job-header">
+            <h1>Ngôn ngữ</h1>
+            <i class="ic-mic"></i>
+          </div>
+          <div class="job-content">
+            <div class="language">
+              <div class="language-item">
+                <div class="language-name">
+                  <h5>Tiếng Anh - IELTS 7.0</h5>
+                </div>
+                <div class="rate">
+                  <div class="active"></div>
+                  <div class="active"></div>
+                  <div class="non-active"></div>
+                </div>
+              </div>
+              <div class="language-item">
+                <div class="language-name">
+                  <h5>Tiếng Nhật - JLPT N4</h5>
+                </div>
+                <div class="rate">
+                  <div class="active"></div>
+                  <div class="non-active"></div>
+                  <div class="non-active"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="job-item">
+          <div class="job-header">
             <h1>Kỹ năng</h1>
             <i class="ic-tools-2"></i>
+          </div>
+          <div class="job-content">
             <div class="skill">
               <div class="skill-item">
                 <div class="skill-name">
@@ -262,10 +292,10 @@
     <section id="certificate" class="bg-grey">
       <div class="container">
         <h1 class="section-title">Chứng chỉ - Giải thưởng</h1>
-        <div class="row-certificate">
+        <div class="certificate-container">
           <div class="certificate-item">
             <div class="certificate-image">
-              <img src="./images/Cert_WEB.png" />
+              <img src="images/Cert_WEB.png" alt="Web certificate" />
             </div>
             <div class="certificate-content">
               <h4 class="certificate-name">Chứng chỉ lập trình web - Funix</h4>
@@ -275,9 +305,10 @@
               </h5>
             </div>
           </div>
+          <div class="vertical"></div>
           <div class="certificate-item">
             <div class="certificate-image">
-              <img src="./images/Cert_PRF.png" />
+              <img src="images/Cert_PRF.png" alt="Javascript certificate" />
             </div>
             <div class="certificate-content">
               <h4 class="certificate-name">
@@ -289,9 +320,10 @@
               </h5>
             </div>
           </div>
+          <div class="line"></div>
           <div class="certificate-item">
             <div class="certificate-image">
-              <img src="./images/Cert_DBI.png" />
+              <img src="images/Cert_DBI.png" alt="Database certificate" />
             </div>
             <div class="certificate-content">
               <h4 class="certificate-name">
@@ -310,10 +342,10 @@
     <section id="project">
       <div class="container">
         <h1 class="section-title">Dự án</h1>
-        <div class="row-project">
+        <div class="project-container">
           <div class="project-item">
-            <div class="project-image">
-              <img src="images/project_1.png" alt="project cv ca nhan" />
+            <div class="project-img">
+              <img src="images/project_1.png" alt="CV cá nhân" />
             </div>
             <h4 class="project-name">CV cá nhân</h4>
             <div class="time-line">
@@ -323,29 +355,31 @@
             </div>
             <div class="project-description">
               <table>
-                <tr>
-                  <td>Mô tả</td>
-                  <td>
-                    Trang Web CV cá nhân online.Gồm các thông tin cá nhân cũng
-                    như kỹ năng nghề nghiệp.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nhiệm vụ</td>
-                  <td>Phát triển, tối ưu code và xử lý lỗi.</td>
-                </tr>
-                <tr>
-                  <td>Công nghệ</td>
-                  <td>HTML/CSS.</td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>Mô tả</td>
+                    <td>
+                      Trang Web CV cá nhân online.Gồm các thông tin cá nhân cũng
+                      như kỹ năng nghề nghiệp.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nhiệm vụ</td>
+                    <td>Phát triển, tối ưu code và xử lý lỗi.</td>
+                  </tr>
+                  <tr>
+                    <td>Công nghệ</td>
+                    <td>HTML/CSS.</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
           <div class="project-item">
-            <div class="project-image">
+            <div class="project-img">
               <img
                 src="images/project_2.png"
-                alt="project trang web quan ly thu cung"
+                alt="Trang web quản lý thú cưng"
               />
             </div>
             <h4 class="project-name">Trang web quản lý thú cưng</h4>
@@ -356,31 +390,30 @@
             </div>
             <div class="project-description">
               <table>
-                <tr>
-                  <td>Mô tả</td>
-                  <td>
-                    Ứng dụng giúp quản lý các thông tin của thú cưng như: Cân
-                    nặng, giống, tình trạng tiêm chủng,...Bao gồm các chức năng
-                    thêm/sửa/xóa.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nhiệm vụ</td>
-                  <td>Phát triển, tối ưu code và xử lý lỗi.</td>
-                </tr>
-                <tr>
-                  <td>Công nghệ</td>
-                  <td>HTML/CSS.</td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>Mô tả</td>
+                    <td>
+                      Ứng dụng giúp quản lý các thông tin của thú cưng như: Cân
+                      nặng, giống, tình trạng tiêm chủng,...Bao gồm các chức
+                      năng thêm/sửa/xóa.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nhiệm vụ</td>
+                    <td>Phát triển, tối ưu code và xử lý lỗi.</td>
+                  </tr>
+                  <tr>
+                    <td>Công nghệ</td>
+                    <td>HTML/CSS.</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
           <div class="project-item">
-            <div class="project-image">
-              <img
-                src="images/project_3.png"
-                alt="project trang web xem tin tuc"
-              />
+            <div class="project-img">
+              <img src="images/project_3.png" alt="Trang web xem tin tức" />
             </div>
             <h4 class="project-name">Trang web xem tin tức</h4>
             <div class="time-line">
@@ -390,21 +423,23 @@
             </div>
             <div class="project-description">
               <table>
-                <tr>
-                  <td>Mô tả</td>
-                  <td>
-                    Trang Web xem tin tức từ nhiều nguồn khác nhau, người dùng
-                    có thể tìm kiếm các tin tức dựa theo các từ khóa.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nhiệm vụ</td>
-                  <td>Phát triển, tối ưu code và xử lý lỗi.</td>
-                </tr>
-                <tr>
-                  <td>Công nghệ</td>
-                  <td>HTML/CSS.</td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td>Mô tả</td>
+                    <td>
+                      Trang Web xem tin tức từ nhiều nguồn khác nhau, người dùng
+                      có thể tìm kiếm các tin tức dựa theo các từ khóa.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nhiệm vụ</td>
+                    <td>Phát triển, tối ưu code và xử lý lỗi.</td>
+                  </tr>
+                  <tr>
+                    <td>Công nghệ</td>
+                    <td>HTML/CSS.</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>

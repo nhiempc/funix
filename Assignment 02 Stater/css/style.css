@@ -1,10 +1,11 @@
 * {
   margin: 0px;
   font-family: "Roboto", sans-serif;
-  line-height: 1.5;
-  box-sizing: border-box;
+  line-height: 1.8;
 }
-
+:root {
+  --primary-color: #199cdb;
+}
 .bg-grey {
   background: #f7f7f7;
 }
@@ -13,20 +14,39 @@ section > .container {
   width: 1170px;
   margin: auto;
   display: block;
+
   padding: 30px 50px;
 }
-
-#nav-bar {
+img {
+  display: block;
+  width: 100%;
+}
+/* Phần banner */
+#banner {
+  position: relative;
+}
+.banner-img img {
+  max-height: 500px;
+  object-fit: cover;
+}
+.banner-text {
+  position: absolute;
+  width: 100%;
   text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+/* Phần navbar */
+#nav-bar .container {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   border-bottom: 1px solid #d0d0d0;
 }
-#banner {
-  padding: 50px 50px 200px 50px;
-  text-align: center;
-  color: white;
-  background-image: url("../images/banner.jpg");
-}
-#nav-bar a {
+#nav-bar .container a {
   text-decoration: none;
   color: black;
   padding: 30px 10px;
@@ -38,93 +58,74 @@ section > .container {
 #nav-bar a:nth-child(5) {
   border-right: 1px solid #d0d0d0;
 }
-#nav-bar i {
-  color: #199cdb;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-#nav-bar .container {
-  padding: 0;
-  display: flex;
-  justify-content: center;
+#nav-bar .container i {
+  color: var(--primary-color);
 }
 .name {
-  display: flex;
-  flex-direction: column;
-  padding: 0px 50px;
-  justify-content: center;
+  position: relative;
+  min-width: 200px;
 }
-.name h1 {
-  font-size: 1.5em;
+.avatar {
+  position: absolute;
+  display: flex;
+  width: 150px;
+  height: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -30px;
+}
+.avatar img {
+  border-radius: 50%;
+  border: 10px solid white;
 }
 .name p {
   color: gray;
   font-size: 0.75em;
 }
+/* Phần thông tin cá nhân */
 #about .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
 }
-#target,
-#personal-info {
-  width: 50%;
-  padding: 30px 0px;
+#about .container .section-title {
+  margin-bottom: 50px;
 }
-#target {
-  background-color: #f5f5f5;
-  padding: 20px;
-}
-#personal-info {
-  background-color: #f0f0f0;
-}
-#personal-info h1 {
-  padding: 0 50px;
-}
-.mt-40.info {
+#personal-info .info {
   list-style-type: none;
-  padding: 50px 50px 0px 50px;
+  padding: 0;
 }
-.mt-40.info li {
-  padding: 5px 0px;
+.info li span {
+  font-weight: bold;
 }
-#personal-info .section-title {
-  padding-left: 40px;
+.info-icons {
+  color: var(--primary-color);
+  padding-top: 30px;
 }
-#target p {
-  padding: 50px 50px 0px 0px;
-  line-height: 2em;
-}
+/* Phần công việc */
 #job-info .container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
-.column {
-  width: calc(33.33% - 40px);
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  height: fit-content;
-  margin: 0px 20px;
-}
-.column-item {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+.job-item {
   border: 1px solid #d0d0d0;
   box-shadow: 1px 1px 5px #d0d0d0;
-  padding: 20px 0;
-  margin: 20px 0px;
 }
-.column-item h1 {
-  width: 75%;
-  padding: 0 40px;
+.job-header {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
-.column-item i {
-  width: 25%;
-  text-align: center;
+.job-header h1 {
+  padding: 20px 40px;
+}
+.job-header i {
+  padding: 20px 40px;
   font-size: 36px;
   color: gray;
+}
+.work-detail {
+  padding: 20px 40px;
 }
 .time-line h5 {
   font-style: italic;
@@ -133,14 +134,10 @@ section > .container {
   color: gray;
 }
 .recent {
-  background-color: #199cdb;
+  background-color: var(--primary-color);
   color: white;
   border-radius: 5px;
   padding: 2px 10px;
-}
-.work-detail {
-  padding: 40px 20px 0px 40px;
-  width: 100%;
 }
 .work-content h5,
 .hobbies-item h5 {
@@ -148,134 +145,113 @@ section > .container {
   font-weight: unset;
   color: gray;
 }
-.hobbies-item h5 {
-  padding: 10px 0px;
-  text-align: center;
-}
 .hobbies {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 40px 40px 0px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 40px;
 }
 .hobbies-item {
-  width: 25%;
+  text-align: center;
 }
 .hobbies-item i {
   width: 50px;
-  color: #199cdb;
+  color: var(--primary-color);
   font-size: 24px;
   height: 50px;
   border: 1px solid;
   border-radius: 50%;
   line-height: 50px;
+  text-align: center;
+}
+.language,
+.skill {
+  padding: 20px 40px;
 }
 .rate {
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 20px 0px;
-}
-.rate div {
-  margin-right: 10px;
-  width: calc(33.33% - 10px);
+  gap: 20px;
 }
 .rate div.active {
   height: 2px;
-  background-color: #199cdb;
+  background-color: var(--primary-color);
 }
 .rate div.non-active {
   height: 2px;
   background-color: #d0d0d0;
 }
-.language,
-.skill {
-  width: 100%;
-  padding-top: 40px;
+/* Phần chứng chỉ, giải thưởng */
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 20px 0;
+  position: relative;
 }
-.language-item,
-.skill-item {
-  width: 100%;
-  padding: 0px 40px;
+.line {
+  grid-column: 1/-1;
+  height: 1px;
+  background-color: orange;
 }
-.row-certificate,
-.row-project {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+.vertical {
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  width: 1px;
+  background-color: orange;
+  left: 50%;
+  margin-bottom: 40px;
 }
 .certificate-item {
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #d6c08d;
-}
-.certificate-image {
-  width: 40%;
-}
-.certificate-content {
-  width: calc(60% - 40px);
-}
-.certificate-item:nth-child(odd) .certificate-content {
-  border-right: 1px solid #d6c08d;
-}
-.certificate-image img {
-  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 20px;
 }
 .certificate-name {
   text-transform: uppercase;
 }
 .certificate-content h5 {
-  line-height: 1.8;
   font-weight: unset;
   color: gray;
 }
-#certificate .section-title {
-  padding: 20px 0;
-}
-.project-item {
-  margin: 0px 20px;
-  width: calc(33.33% - 40px);
-  display: flex;
-  flex-wrap: wrap;
-}
-.project-image {
-  width: 100%;
-}
-.project-image img {
-  width: 100%;
+/* Phần dự án */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  padding-top: 20px;
 }
 .project-name {
-  width: 100%;
   text-transform: uppercase;
   padding: 10px 20px;
   border: 1px solid #d0d0d0;
 }
-.time-line .year {
-  padding: 5px 20px;
-  background-color: #199cdb;
-  color: white;
-  border-radius: 20px;
-  font-size: 0.8em;
-}
 .project-item .time-line {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  width: 100%;
   gap: 20px;
   padding: 10px 20px;
+  color: gray;
   font-size: 0.8em;
   border-left: 1px solid #d0d0d0;
   border-right: 1px solid #d0d0d0;
 }
+.time-line .year {
+  padding: 5px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 20px;
+}
 .project-description {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   color: gray;
+}
+.project-description table,
+.project-description td {
+  border-collapse: collapse;
+  border: 1px solid #d0d0d0;
 }
 .project-description td:first-child {
   width: 30%;
@@ -285,25 +261,22 @@ section > .container {
   line-height: 1.8;
   padding: 10px;
 }
-.project-description table,
-.project-description td {
-  border-collapse: collapse;
-  border: 1px solid #d0d0d0;
-}
-#footer ul {
-  list-style-type: none;
+/* Phần footer */
+#footer .container ul {
   margin: 0;
   padding: 0;
+  list-style-type: none;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 #footer ul li {
-  margin: 0px 20px;
   display: flex;
   align-items: center;
 }
 #footer ul li i {
   font-size: 1.75rem;
   margin: 0px 5px;
-  color: #199cdb;
+  color: var(--primary-color);
 }
