@@ -5,6 +5,7 @@
 }
 :root {
   --primary-color: #199cdb;
+  --secondary-color: #d0d0d0;
 }
 .bg-grey {
   background: #f7f7f7;
@@ -28,6 +29,7 @@ img {
 .banner-img img {
   max-height: 500px;
   object-fit: cover;
+  filter: brightness(0.75);
 }
 .banner-text {
   position: absolute;
@@ -44,19 +46,19 @@ img {
   margin: 0;
   padding: 0;
   width: 100%;
-  border-bottom: 1px solid #d0d0d0;
+  border-bottom: 1px solid var(--secondary-color);;
 }
 #nav-bar .container a {
   text-decoration: none;
   color: black;
   padding: 30px 10px;
-  border-left: 1px solid #d0d0d0;
+  border-left: 1px solid var(--secondary-color);;
 }
 #nav-bar a:nth-child(2) {
-  border-right: 1px solid #d0d0d0;
+  border-right: 1px solid var(--secondary-color);;
 }
 #nav-bar a:nth-child(5) {
-  border-right: 1px solid #d0d0d0;
+  border-right: 1px solid var(--secondary-color);;
 }
 #nav-bar .container i {
   color: var(--primary-color);
@@ -90,6 +92,7 @@ img {
 }
 #about .container .section-title {
   margin-bottom: 50px;
+  margin-top: 20px;
 }
 #personal-info .info {
   list-style-type: none;
@@ -102,6 +105,9 @@ img {
   color: var(--primary-color);
   padding-top: 30px;
 }
+.info-icons i{
+  cursor: pointer;
+}
 /* Phần công việc */
 #job-info .container {
   display: grid;
@@ -109,8 +115,8 @@ img {
   gap: 40px;
 }
 .job-item {
-  border: 1px solid #d0d0d0;
-  box-shadow: 1px 1px 5px #d0d0d0;
+  border: 1px solid var(--secondary-color);;
+  box-shadow: 1px 1px 5px var(--secondary-color);;
 }
 .job-header {
   display: grid;
@@ -126,6 +132,21 @@ img {
 }
 .work-detail {
   padding: 20px 40px;
+}
+.name-work{
+  position: relative;
+}
+.name-work::before{
+  position: absolute;
+  content: '';
+  top: 50%;
+  transform: translateY(-50%);
+  left: -25px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  filter: blur(1px);
 }
 .time-line h5 {
   font-style: italic;
@@ -162,6 +183,7 @@ img {
   border-radius: 50%;
   line-height: 50px;
   text-align: center;
+  margin-bottom: 10px;
 }
 .language,
 .skill {
@@ -175,12 +197,12 @@ img {
   gap: 20px;
 }
 .rate div.active {
-  height: 2px;
+  height: 4px;
   background-color: var(--primary-color);
 }
 .rate div.non-active {
-  height: 2px;
-  background-color: #d0d0d0;
+  height: 4px;
+  background-color: var(--secondary-color);;
 }
 /* Phần chứng chỉ, giải thưởng */
 .certificate-container {
@@ -202,6 +224,7 @@ img {
   width: 1px;
   background-color: orange;
   left: 50%;
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 .certificate-item {
@@ -223,10 +246,13 @@ img {
   column-gap: 40px;
   padding-top: 20px;
 }
+.project-img{
+  border: 1px solid var(--secondary-color);
+}
 .project-name {
   text-transform: uppercase;
   padding: 10px 20px;
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--secondary-color);;
 }
 .project-item .time-line {
   display: flex;
@@ -235,8 +261,8 @@ img {
   padding: 10px 20px;
   color: gray;
   font-size: 0.8em;
-  border-left: 1px solid #d0d0d0;
-  border-right: 1px solid #d0d0d0;
+  border-left: 1px solid var(--secondary-color);;
+  border-right: 1px solid var(--secondary-color);;
 }
 .time-line .year {
   padding: 5px 20px;
@@ -248,10 +274,11 @@ img {
   font-size: 0.8rem;
   color: gray;
 }
-.project-description table,
-.project-description td {
+.project-description table{
   border-collapse: collapse;
-  border: 1px solid #d0d0d0;
+}
+.project-description td {
+  border: 1px solid var(--secondary-color);;
 }
 .project-description td:first-child {
   width: 30%;
@@ -274,6 +301,7 @@ img {
 #footer ul li {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 #footer ul li i {
   font-size: 1.75rem;
