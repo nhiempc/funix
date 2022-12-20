@@ -2,6 +2,7 @@
   margin: 0px;
   font-family: "Roboto", sans-serif;
   line-height: 1.8;
+  letter-spacing: 0.5px;
 }
 :root {
   --primary-color: #199cdb;
