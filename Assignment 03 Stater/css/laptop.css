@@ -112,6 +112,46 @@ img {
 .info-icons i{
   cursor: pointer;
 }
+.info-group{
+  display: none;
+  position: relative;
+}
+.info-group .close-btn{
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  color: white;
+  right: 0px;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+.email-input-group input{
+  width: 100%;
+  border: 1px solid var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.email-input-group input:focus{
+  outline: none;
+}
+.email-input-group button{
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+}
+.message{
+  color: gray;
+  margin-top: 5px;
+}
 /* Phần công việc */
 #job-info .container {
   display: grid;

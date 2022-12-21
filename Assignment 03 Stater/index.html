@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script defer src="js/script.js"></script>
     <title>Assignment 03</title>
   </head>
   <body>
@@ -53,19 +54,29 @@
         </div>
         <div id="personal-info">
           <h1 class="section-title">Thông tin cá nhân</h1>
-          <ul class="mt-40 info">
-            <li><span>Giới tính</span> : Nam</li>
-            <li><span>Ngày sinh</span> : 19/05/2000</li>
-            <li><span>Điện thoại</span> : (+84) 912398xxx</li>
-            <li><span>Email</span> : sinhvien@funix.edu.vn</li>
-            <li><span>Địa chỉ</span> : Số 10, đường 10, Hà Nội</li>
-            <li><span>Website</span> : https://abc.tech</li>
-          </ul>
-          <div class="info-icons">
-            <i class="icon-twitter"></i>
-            <i class="icon-facebook"></i>
-            <i class="icon-gplus"></i>
-            <i class="icon-linkedin"></i>
+          <div class="info-group">
+            <ul class="mt-40 info">
+              <li><span>Giới tính</span> : Nam</li>
+              <li><span>Ngày sinh</span> : 19/05/2000</li>
+              <li><span>Điện thoại</span> : (+84) 912398xxx</li>
+              <li><span>Email</span> : sinhvien@funix.edu.vn</li>
+              <li><span>Địa chỉ</span> : Số 10, đường 10, Hà Nội</li>
+              <li><span>Website</span> : https://abc.tech</li>
+            </ul>
+            <div class="info-icons">
+              <i class="icon-twitter"></i>
+              <i class="icon-facebook"></i>
+              <i class="icon-gplus"></i>
+              <i class="icon-linkedin"></i>
+            </div>
+            <div class="close-btn">X</div>
+          </div>
+          <div class="email-input-group">
+            <form>
+              <input type="email" name="email" id="email">
+              <h6 class="message">Hãy nhập email để xác thực</h6>
+              <button type="button" class="email-btn" id="submit-btn">Submit</button>
+            </form>
           </div>
         </div>
       </div>
