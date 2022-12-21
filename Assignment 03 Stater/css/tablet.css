@@ -14,4 +14,44 @@
     .certificate-item{
         grid-template-columns: 1fr;
     }
+    .charter-wrapper{
+        grid-template-columns: 1fr;
+    }
+    #goals{
+        grid-row: 1/2;
+    }
+    #scopes{
+        grid-row: 2/3;
+    }
+    #team{
+        grid-row: 3/4;
+    }
+    #primary{
+        grid-row: 4/5;
+    }
+    #timeline{
+        grid-row: 5/6;
+        grid-column: unset;
+    }
+    #goals .row, #team .row, #primary .row, #timeline .row{
+        flex-direction: column;
+    }
+    #team .row .content, #primary .row .content{
+        align-self: flex-start;
+    }
+    #scopes .charter-content{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    #timeline .row{
+        gap: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #timeline .row>*{
+        align-self: flex-start;
+    }
+    #timeline .row .content{
+        width: 100%;
+    }
 }
