@@ -24,6 +24,14 @@ img {
   display: block;
   width: 100%;
 }
+button{
+  cursor: pointer;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+}
 /* Phần banner */
 #banner {
   position: relative;
@@ -141,12 +149,6 @@ img {
 }
 .email-input-group button{
   margin-top: 10px;
-  cursor: pointer;
-  border: none;
-  padding: 5px 20px;
-  border-radius: 5px;
-  background-color: var(--primary-color);
-  color: white;
 }
 .message{
   color: gray;
@@ -161,18 +163,37 @@ img {
 .job-item {
   border: 1px solid var(--secondary-color);
   box-shadow: 1px 1px 5px var(--secondary-color);
+  position: relative;
+  cursor: pointer;
 }
 .job-header {
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
 .job-header h1 {
-  padding: 20px 40px;
+  padding: 20px;
 }
 .job-header i {
   padding: 20px 40px;
   font-size: 36px;
   color: gray;
+}
+.job-content{
+  display: none;
+}
+.job-item:hover{
+  padding-bottom: 50px;
+  transition: all 0.5s;
+}
+.job-footer{
+  display: none;
+}
+.job-item:hover .job-footer{
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .work-detail {
   padding: 20px 40px;

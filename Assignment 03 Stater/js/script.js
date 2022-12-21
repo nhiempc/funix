@@ -35,6 +35,16 @@ const handleInputChange = () => {
         errMessage.style.color = 'red';
     }
 }
+const handleShowHide = (element) => {
+    let jobContent = element.parentNode.parentNode.childNodes[3];
+    if(window.getComputedStyle(jobContent).display === "none"){
+        jobContent.style.display = 'block';
+        element.textContent = "View less";
+    }else{
+        jobContent.style.display = 'none';
+        element.textContent = "View more";
+    }
+}
 document.getElementById('submit-btn').addEventListener('click', handleSubmit);
 document.getElementById('email').addEventListener('input', handleInputChange);
 document.querySelector('.close-btn').addEventListener('click', handleClose);
