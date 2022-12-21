@@ -1,0 +1,315 @@
+* {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #199cdb;
+  --secondary-color: #d0d0d0;
+}
+.bg-grey {
+  background: #f7f7f7;
+}
+
+section > .container {
+  max-width: 1170px;
+  margin: auto;
+  display: block;
+
+  padding: 30px 50px;
+}
+img {
+  display: block;
+  width: 100%;
+}
+/* Phần banner */
+#banner {
+  position: relative;
+}
+.banner-img img {
+  max-height: 500px;
+  object-fit: cover;
+  filter: brightness(0.75);
+}
+.banner-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+/* Phần navbar */
+#nav-bar{
+  border-bottom: 1px solid var(--secondary-color);
+}
+#nav-bar .container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+#nav-bar .container a {
+  text-decoration: none;
+  color: black;
+  padding: 30px 10px;
+  border-left: 1px solid var(--secondary-color);
+}
+#nav-bar a:nth-child(2) {
+  border-right: 1px solid var(--secondary-color);
+}
+#nav-bar a:nth-child(5) {
+  border-right: 1px solid var(--secondary-color);
+}
+#nav-bar .container i {
+  color: var(--primary-color);
+}
+.name {
+  position: relative;
+  min-width: 200px;
+}
+.avatar {
+  position: absolute;
+  display: flex;
+  width: 150px;
+  height: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -30px;
+}
+.avatar img {
+  border-radius: 50%;
+  border: 10px solid white;
+}
+.name p {
+  color: gray;
+  font-size: 0.75em;
+}
+/* Phần thông tin cá nhân */
+#about .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+#about .container .section-title {
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+#personal-info .info {
+  list-style-type: none;
+  padding: 0;
+}
+.info li span {
+  font-weight: bold;
+}
+.info-icons {
+  color: var(--primary-color);
+  padding-top: 30px;
+}
+.info-icons i{
+  cursor: pointer;
+}
+/* Phần công việc */
+#job-info .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.job-item {
+  border: 1px solid var(--secondary-color);
+  box-shadow: 1px 1px 5px var(--secondary-color);
+}
+.job-header {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.job-header h1 {
+  padding: 20px 40px;
+}
+.job-header i {
+  padding: 20px 40px;
+  font-size: 36px;
+  color: gray;
+}
+.work-detail {
+  padding: 20px 40px;
+}
+.name-work{
+  position: relative;
+}
+.name-work::before{
+  position: absolute;
+  content: '';
+  top: 50%;
+  transform: translateY(-50%);
+  left: -25px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  filter: blur(1px);
+}
+.time-line h5 {
+  font-style: italic;
+  font-weight: unset;
+  padding: 10px 0px;
+  color: gray;
+}
+.recent {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+.work-content h5,
+.hobbies-item h5 {
+  line-height: 1.8;
+  font-weight: unset;
+  color: gray;
+}
+.hobbies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 40px;
+}
+.hobbies-item {
+  text-align: center;
+}
+.hobbies-item i {
+  width: 50px;
+  color: var(--primary-color);
+  font-size: 24px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.language,
+.skill {
+  padding: 20px 40px;
+}
+.rate {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px 0px;
+  gap: 20px;
+}
+.rate div.active {
+  height: 4px;
+  background-color: var(--primary-color);
+}
+.rate div.non-active {
+  height: 4px;
+  background-color: var(--secondary-color);
+}
+/* Phần chứng chỉ, giải thưởng */
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 20px 0;
+  position: relative;
+}
+.line {
+  grid-column: 1/-1;
+  height: 1px;
+  background-color: orange;
+}
+.vertical {
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  width: 1px;
+  background-color: orange;
+  left: 50%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.certificate-item {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 20px;
+}
+.certificate-name {
+  text-transform: uppercase;
+}
+.certificate-content h5 {
+  font-weight: unset;
+  color: gray;
+}
+/* Phần dự án */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  padding-top: 20px;
+}
+.project-img{
+  border: 1px solid var(--secondary-color);
+}
+.project-name {
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 1px solid var(--secondary-color);
+}
+.project-item .time-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  color: gray;
+  font-size: 0.8em;
+  border-left: 1px solid var(--secondary-color);
+  border-right: 1px solid var(--secondary-color);
+}
+.time-line .year {
+  padding: 5px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 20px;
+}
+.project-description {
+  font-size: 0.8rem;
+  color: gray;
+}
+.project-description table{
+  border-collapse: collapse;
+}
+.project-description td {
+  border: 1px solid var(--secondary-color);
+}
+.project-description td:first-child {
+  width: 30%;
+  padding: 10px 20px;
+}
+.project-description td:nth-child(2) {
+  line-height: 1.8;
+  padding: 10px;
+}
+/* Phần footer */
+#footer .container ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#footer ul li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#footer ul li i {
+  font-size: 1.75rem;
+  margin: 0px 5px;
+  color: var(--primary-color);
+}

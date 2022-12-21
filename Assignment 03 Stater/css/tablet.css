@@ -1,0 +1,17 @@
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .name{
+        display: none;
+    }
+    #nav-bar a:nth-child(2){
+        border-right: none;
+    }
+    #about .container{
+        gap: 40px;
+    }
+    #job-info .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .certificate-item{
+        grid-template-columns: 1fr;
+    }
+}
