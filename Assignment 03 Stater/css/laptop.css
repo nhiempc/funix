@@ -175,10 +175,10 @@ button:hover{
   grid-template-columns: 3fr 1fr;
 }
 .job-header h1 {
-  padding: 20px;
+  padding: 20px 40px;
 }
 .job-header i {
-  padding: 20px 40px;
+  padding: 20px 40px 20px 0px;
   font-size: 36px;
   color: gray;
 }
